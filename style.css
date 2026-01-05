@@ -1,0 +1,15 @@
+:root { font-family: system-ui, -apple-system, "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif; }
+body { margin: 0; line-height: 1.6; }
+.wrap { max-width: 920px; margin: 0 auto; padding: 16px; }
+header { display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; background: #fff; border-bottom: 1px solid #eee; }
+.brand { font-weight: 700; }
+.nav a { margin-left: 12px; text-decoration: none; color: #111; }
+.hero { padding: 40px 0; }
+.card { padding: 20px; border: 1px solid #eee; border-radius: 12px; margin: 16px 0; background: #fff; }
+.btn { display: inline-block; padding: 10px 14px; border-radius: 10px; border: 1px solid #111; text-decoration: none; color: #111; background: #fff; cursor: pointer; }
+.form { display: grid; gap: 12px; margin-top: 12px; }
+input, textarea { width: 100%; padding: 10px; border-radius: 10px; border: 1px solid #ddd; }
+.dl { display: grid; gap: 8px; }
+.dl div { display: grid; grid-template-columns: 120px 1fr; gap: 12px; }
+.note { color: #666; font-size: 0.9rem; }
+.footer { padding: 24px 0; color: #666; }
