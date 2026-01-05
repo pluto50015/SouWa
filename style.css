@@ -359,3 +359,40 @@ body::before{
   text-align:center;
 }
 
+/* --- Google Map responsive embed --- */
+.map{
+  margin-top: 6px;
+}
+
+.map__frame{
+  width: 100%;
+  /* 16:9 で可変（スマホでも崩れない） */
+  aspect-ratio: 16 / 9;
+
+  border-radius: 14px;
+  overflow: hidden;
+
+  /* 黒板デザインに合わせたい場合 */
+  border: 1px dashed rgba(255,255,255,.28);
+  background: rgba(0,0,0,.10);
+}
+
+.map__frame iframe{
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.map-link{
+  margin: 8px 0 0;
+  text-align: center;
+}
+
+.map-link a{
+  color: rgba(255,255,255,.92);
+  text-decoration: underline;
+  text-decoration-style: dotted;
+}
+
+
