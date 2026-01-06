@@ -520,3 +520,8 @@ a{ color: var(--accent) !important; }
   margin-bottom: 12px !important;
 }
 
+/* ボタン系のリンク文字は白に固定（aの全体指定に負けないよう最後に） */
+a.nav__cta,
+a.btn{
+  color: #fff !important;
+}
