@@ -395,4 +395,115 @@ body::before{
   text-decoration-style: dotted;
 }
 
+/* =========================
+   THEME OVERRIDE: 水色テーマ
+   style.css の一番下に追記
+========================= */
+
+:root{
+  /* 全体 */
+  --bg1: #dff3ff;     /* 明るい水色 */
+  --bg2: #bfe6ff;     /* 少し濃い水色 */
+  --surface: rgba(255,255,255,.86);
+  --surface2: rgba(255,255,255,.72);
+
+  --text: #0b2a3a;    /* 深い青系（読みやすい） */
+  --muted: #3d6c86;
+
+  /* 強調（要所の色） */
+  --accent: #1f86c7;  /* メイン強調：青 */
+  --accent2: #2bb0c9; /* サブ強調：水色寄り */
+  --danger: #ff5b7a;  /* 注意喚起用（赤寄り、必要箇所だけ） */
+
+  --line: rgba(11,42,58,.16);
+}
+
+/* 背景を水色に */
+body{
+  color: var(--text) !important;
+  background:
+    radial-gradient(1200px 700px at 20% 0%, rgba(255,255,255,.70), transparent 60%),
+    radial-gradient(900px 500px at 85% 20%, rgba(255,255,255,.55), transparent 60%),
+    linear-gradient(180deg, var(--bg1), var(--bg2)) !important;
+}
+
+/* 黒板の粉っぽいオーバーレイを消す（黒板CSSが残ってる場合の対策） */
+body::before{ display:none !important; }
+
+/* ヘッダー */
+.header{
+  background: rgba(255,255,255,.74) !important;
+  border-bottom: 1px solid var(--line) !important;
+}
+.header, .header *{
+  color: var(--text) !important;
+}
+
+/* カード：白ベース＋やわらかい影 */
+.card{
+  background: var(--surface) !important;
+  border: 1px solid var(--line) !important;
+  box-shadow: 0 14px 28px rgba(11,42,58,.10) !important;
+}
+.card::before{
+  border: 2px dashed rgba(31,134,199,.25) !important;
+}
+
+/* 強調文字（タイトルの「想」など） */
+.accent{
+  color: var(--accent) !important;
+  text-shadow: none !important;
+}
+
+/* ブランド名の囲み */
+.brand__name{
+  border-color: rgba(31,134,199,.35) !important;
+  background: rgba(191,230,255,.55) !important;
+}
+
+/* ナビ */
+.nav a{
+  background: rgba(255,255,255,.55) !important;
+  border: 1px solid rgba(31,134,199,.22) !important;
+}
+.nav__cta{
+  background: linear-gradient(90deg, var(--accent), var(--accent2)) !important;
+  color: #fff !important;
+  border-color: transparent !important;
+}
+
+/* ボタン */
+.btn{
+  background: linear-gradient(90deg, var(--accent), var(--accent2)) !important;
+  border-color: transparent !important;
+  color:#fff !important;
+}
+.btn--ghost{
+  background: rgba(255,255,255,.45) !important;
+  border: 1px solid rgba(31,134,199,.35) !important;
+  color: var(--text) !important;
+}
+
+/* チップ（自立/学び/遊び）も水色系に寄せる */
+.chip{
+  background: rgba(255,255,255,.60) !important;
+  border: 1px solid rgba(31,134,199,.18) !important;
+}
+.chip--pink{ color: var(--accent) !important; }
+.chip--blue{ color: var(--accent2) !important; }
+.chip--yellow{ color: #1b6da0 !important; }
+
+/* 文章色 */
+.lead, .lead2, .note, .list li, .steps li, .dl dt, .dl dd, .figure figcaption{
+  color: var(--muted) !important;
+}
+
+/* マップ枠（もしiframe版を使ってる場合） */
+.map__frame{
+  border: 1px solid rgba(31,134,199,.25) !important;
+  background: rgba(255,255,255,.55) !important;
+}
+
+/* リンク */
+a{ color: var(--accent) !important; }
 
