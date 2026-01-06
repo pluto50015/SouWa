@@ -520,8 +520,7 @@ a{ color: var(--accent) !important; }
   margin-bottom: 12px !important;
 }
 
-/* ボタン系のリンク文字は白に固定（aの全体指定に負けないよう最後に） */
-a.nav__cta,
+/* ボタン文字は白：ただしヘッダーのCTA(nav__cta)は除外 */
 a.btn{
   color: #fff !important;
 }
@@ -533,6 +532,13 @@ a.btn{
 
 /* 黒文字に合わせてCTA背景を明るめに */
 .header .nav a.nav__cta{
+  background: rgba(255,255,255,.75) !important;
+  border: 1px solid rgba(31,134,199,.30) !important;
+}
+
+/* ヘッダーの「お問い合わせ」だけ文字を黒に固定 */
+.header .nav a.nav__cta{
+  color: #0b2a3a !important;
   background: rgba(255,255,255,.75) !important;
   border: 1px solid rgba(31,134,199,.30) !important;
 }
