@@ -525,3 +525,14 @@ a.nav__cta,
 a.btn{
   color: #fff !important;
 }
+
+/* ヘッダーの「お問い合わせ」だけ文字を黒に固定 */
+.header .nav a.nav__cta{
+  color: #0b2a3a !important;  /* 黒寄り（本文色に合わせた濃紺） */
+}
+
+/* 黒文字に合わせてCTA背景を明るめに */
+.header .nav a.nav__cta{
+  background: rgba(255,255,255,.75) !important;
+  border: 1px solid rgba(31,134,199,.30) !important;
+}
