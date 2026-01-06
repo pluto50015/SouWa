@@ -542,3 +542,27 @@ a.btn{
   background: rgba(255,255,255,.75) !important;
   border: 1px solid rgba(31,134,199,.30) !important;
 }
+
+/* HERO画像の箱（枠・背景）を消して、背景と同化させる */
+.hero .figure{
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.hero .figure img{
+  border-radius: 14px; /* 角丸だけ残す（不要なら消してOK） */
+}
+
+.hero .figure figcaption{
+  background: transparent !important;
+  border-top: none !important;
+  color: var(--muted) !important;
+}
+
+/* ヒーローの「活動内容を見る」をヘッダーCTAと同じ配色に */
+.hero a.btn.btn--ghost{
+  background: rgba(255,255,255,.75) !important;
+  border: 1px solid rgba(31,134,199,.30) !important;
+  color: #0b2a3a !important; /* ヘッダーのお問い合わせと同じ濃い文字 */
+}
